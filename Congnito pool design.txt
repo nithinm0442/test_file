@@ -1,0 +1,7 @@
+Cognito Pool Design
+One pool per environment (dev, stage, prod)
+Single pool with email as the sign-in option
+MFA as optional with authentication or SMS as the two options
+Configure SES for cbin.ca for all email sending
+Lambda trigger for registration flow to populate the relational database with user and group information on self-registration
+Lambda trigger on login - retrieve your groups from a relational database and populate the JWT
